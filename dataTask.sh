@@ -36,14 +36,12 @@ restaurer_base(){
 
 # Fonction 5 : supprimer_base
 supprimer_base() {
-    # Vérifier que tasks.txt existe 
+
     if [ -f "tasks.txt" ]; then
-        # Demander confirmation à l'utilisateur [cite: 148]
         read -p "Êtes-vous sûr de vouloir supprimer la base ? (y/n) : " confirmation
-        
-        # Vérifier la réponse
+
         if [ "$confirmation" = "y" ]; then
-            rm tasks.txt [cite: 149]
+            rm tasks.txt
             echo "La base de données a été supprimée."
         else
             echo "Suppression annulée."
