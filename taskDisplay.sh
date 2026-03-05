@@ -1,8 +1,6 @@
 #!/bin/bash
-source taskTool.sh
 source dataTask.sh 
 
- 
 while true; do 
     echo '=========================' 
     echo '  Gestionnaire de taches ' 
@@ -16,18 +14,20 @@ while true; do
     echo '7 - Restaurer la base' 
     echo '8 - Supprimer la base' 
     echo '0 - Quitter' 
-    echo '=========================' 
+
+    echo '========================='
+ 
     read -p 'Votre choix : ' choix
 
     if [ "$choix" = '1' ]; then 
-	initialiser_base 
+        initialiser_base 
     elif [ "$choix" = '2' ]; then 
-	ajouter_tache 
-# ... compléter avec les autres cas 
+        ajouter_tache 
+    # ... compléter avec les autres cas 
     elif [ "$choix" = '0' ]; then 
-	echo 'Au revoir !' 
-	break 
+        echo 'Au revoir !' 
+        break 
     else 
-	echo 'Choix invalide.' 
+         echo 'Choix invalide.' 
     fi 
 done
